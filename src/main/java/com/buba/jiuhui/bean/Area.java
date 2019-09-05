@@ -1,14 +1,13 @@
 package com.buba.jiuhui.bean;
 
 public class Area {
-
+//
     private int id;
     private  String name;
     private String code;
     private int parentId;
     private  String type;
     private Boolean isParent;
-
     private boolean open;
 
     public boolean isOpen() {
