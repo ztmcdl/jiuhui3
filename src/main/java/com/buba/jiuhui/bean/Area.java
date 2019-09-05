@@ -1,7 +1,6 @@
 package com.buba.jiuhui.bean;
 
 public class Area {
-//阿斯蒂芬
     private int id;
     private  String name;
     private String code;
