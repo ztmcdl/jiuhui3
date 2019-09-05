@@ -8,8 +8,6 @@ public class Area {
     private  String type;
     private Boolean isParent;
     private boolean open;
-    private boolean open1;
-    private boolean open2;
 
     public boolean isOpen() {
         return open;
