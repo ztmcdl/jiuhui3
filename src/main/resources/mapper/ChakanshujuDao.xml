@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buba.jiuhui.dao.ChakanshujuDao">
+    <!--用户登录  -->
+    <select id="findAll" resultType="Chakanshujub">
+		SELECT tu.userName,tp.plan_num,tt.true_num,tt.new_kehu,tt.old_kehu,tt.yixiang_kehu,tt.baofei,tp.start_time,tp.end_time
+from tb_plan tp
+LEFT JOIN tb_user tu
+on tp.sahngbaoren=tu.id
+LEFT JOIN tb_area ta
+on tu.area_id=ta.id
+LEFT JOIN tb_true tt
+on  tu.id=tt.shijishangbaoren
+where tp.plan_dis=2 and ta.parentId=1
+
+	</select>
+    <select id="findxianAll" resultType="Chakanshujub">
+		SELECT tu.userName,tp.plan_num,tt.true_num,tt.new_kehu,tt.old_kehu,tt.yixiang_kehu,tt.baofei,tp.start_time,tp.end_time
+from tb_plan tp
+LEFT JOIN tb_user tu
+on tp.sahngbaoren=tu.id
+LEFT JOIN tb_true tt
+on  tu.id=tt.shijishangbaoren
+where tp.plan_dis=2 and tp.sahngbaoren=#{id}
+
+	</select>
+</mapper>

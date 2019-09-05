@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.buba.jiuhui.dao.TrueDao">
+
+
+    <insert id="tianjiatrue" parameterType="true">
+          insert into tb_true(
+          creattime,true_name,true_num,new_kehu,old_kehu,yixiang_kehu,baofei,huodongtime,shijishangbaoren
+          ) values (
+         now(),#{trueName}, #{trueNum}, #{newKehu}, #{oldKehu},#{yixiangKehu},#{baofei},#{huodongtime},#{shijishangbaoren}
+          )
+    </insert>
+</mapper>

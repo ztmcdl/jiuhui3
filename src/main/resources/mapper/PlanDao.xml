@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="com.buba.jiuhui.dao.PlanDao">
+    <insert id="tianjiaplan" parameterType="plan">
+          insert into tb_plan(
+          creattime,plan_name,plan_num,start_time,end_time,plan_dis,sahngbaoren
+          ) values (
+         now(),#{planName}, #{planNum}, #{startTime}, #{endTime},'1',#{sahngbaoren}
+          )
+    </insert>
+
+
+    <select id="findPlanAll" resultType="plan">
+		 select * from tb_plan
+    </select>
+    <select id="findliebiao" resultType="plan">
+		 select * from tb_plan where plan_dis='1'
+    </select>
+    <update id="xiugaizhungtai" parameterType="plan">
+        update tb_plan set
+        plan_dis='2'
+
+        where id=#{id}
+
+    </update>
+</mapper>
