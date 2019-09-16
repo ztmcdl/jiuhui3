@@ -13,4 +13,8 @@ public interface AreaDao {
 
 
     int insertOne(@Param("name") String name, @Param("parentId")Integer parentId, @Param("code")String code);
+
+    int upztreeName(@Param("id") Integer id,@Param("name") String name);
+
+
 }

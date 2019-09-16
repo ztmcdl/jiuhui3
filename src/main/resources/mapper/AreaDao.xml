@@ -11,4 +11,10 @@
     <insert id="insertOne">
 		insert into tb_area(name,parentId,code) values(#{name},#{parentId},#{code})
 	</insert>
+
+    <update id="upztreeName">
+		update tb_area set
+		name=#{name} where id=#{id}
+	</update>
+
 </mapper>

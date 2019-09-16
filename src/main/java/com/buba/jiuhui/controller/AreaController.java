@@ -30,4 +30,11 @@ public class AreaController {
         int i = areaService.insertOne(name,parentId,code);
         return i;
     }
+    @ResponseBody
+    @RequestMapping("upztreeName")
+    public int upztreeName(Integer id, String name) {
+        int i = areaService.upztreeName(id, name);
+        return i;
+
+    }
 }

@@ -13,10 +13,10 @@
 
 
     <select id="findPlanAll" resultType="plan">
-		 select * from tb_plan
+		 select * from tb_plan where sahngbaoren=#{id}
     </select>
     <select id="findliebiao" resultType="plan">
-		 select * from tb_plan where plan_dis='1'
+		 select * from tb_plan where plan_dis='1' and sahngbaoren=#{id}
     </select>
     <update id="xiugaizhungtai" parameterType="plan">
         update tb_plan set

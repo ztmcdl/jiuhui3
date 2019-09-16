@@ -87,6 +87,8 @@
 </body>
 <script>
     $(function () {
+        var id='${user.id}';
+
         $("#tab2").bootstrapTable({
             url : "${pageContext.request.contextPath }/plans/findliebiao",//请求路径
             pagination:true,//开启分页
@@ -97,7 +99,14 @@
             sortName : "id",//定义排序的字段
             sortOrder : "asc",//排序方式
             cache : false,//禁用缓存
+            queryParams : function(params) {//请求参数
+                return {
 
+                    id:id
+
+                }
+
+            },
             columns : [ {
                 field : 'id',
                 title : '序号',

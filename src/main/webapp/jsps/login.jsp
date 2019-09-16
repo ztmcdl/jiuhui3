@@ -4,7 +4,7 @@
   Date: 2019/7/31
   Time: 11:08
   To change this template use File | Settings | File Templates.
---%>
+--%>111
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,7 +14,6 @@
         *{
             margin: 0;
             padding: 0;
-
         }
         div{
             width: 200px;

@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PlanService {
     int tianjiaplan(Plan plan);
-    List<Plan> findPlanAll();
-    List<Plan>findliebiao();
+    List<Plan> findPlanAll(Integer id);
+    List<Plan>findliebiao(Integer id);
     int xiugaizhungtai(Integer id);
 }

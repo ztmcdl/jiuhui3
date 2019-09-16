@@ -14,19 +14,20 @@ public class PlanServiceimpl implements PlanService {
 @Autowired
     private PlanDao planDao;
 
+
     @Override
     public int tianjiaplan(Plan plan) {
         return planDao.tianjiaplan(plan);
     }
 
     @Override
-    public List<Plan> findPlanAll() {
-        return planDao.findPlanAll();
+    public List<Plan> findPlanAll(Integer id) {
+        return planDao.findPlanAll(id);
     }
 
     @Override
-    public List<Plan> findliebiao() {
-        return planDao.findliebiao();
+    public List<Plan> findliebiao(Integer id) {
+        return planDao.findliebiao(id);
     }
 
     @Override

@@ -140,7 +140,7 @@
         },callback:{
             //onClick:zTreeOnClick,
             //beforeRemove: zTreeBeforeRemove,//移除前
-           // onRename: onRename
+            onRename: onRename
 
         }
     }
@@ -188,7 +188,39 @@
 
 
     };
+    function onRename(event, treeId, treeNode, isCancel) {
+        if (isCancel) {
+            return;
+        }
+        //获取 id 为 treeDemo 的 zTree 对象,存到zRree变量中
+        var zTree = $.fn.zTree.getZTreeObj("emp");
+        //获取全部节点 ,存到onodes变量中
+        var onodes = zTree.getNodes()
+        console.log(onodes);
+        //发送请求修改节点信息
+        var data = {
+            "id": treeNode.id,
+            "name": treeNode.name
+        };
+        var name=treeNode.name;
 
+        var id=treeNode.id;
+        $.ajax({
+            type: 'post',
+            url: "${pageContext.request.contextPath }/areas/upztreeName",
+            data: {id:id,name:name},
+            dataType: 'json',
+            success: function (data) {
+                if(data){
+                    alert("修改成功");
+                    intZtree();
+                }else{
+                    alert("修改失败");
+
+                }
+            }
+        });
+    };
     /*鼠标移出后隐藏图标  */
     function removeHoverDom(treeId,treeNode){
 

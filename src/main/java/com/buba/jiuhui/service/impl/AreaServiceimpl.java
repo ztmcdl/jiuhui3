@@ -24,4 +24,10 @@ public class AreaServiceimpl implements AreaService {
         return areaDao.insertOne(name,parentId,code);
     }
 
+    @Override
+    public int upztreeName(Integer id, String name) {
+        return areaDao.upztreeName(id,name);
+    }
+
+
 }

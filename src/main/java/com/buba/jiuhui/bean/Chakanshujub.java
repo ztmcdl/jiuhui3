@@ -13,6 +13,15 @@ public class Chakanshujub {
     private String baofei;
     private Date startTime;
     private Date endTime;
+    private String creattime;
+
+    public String getCreattime() {
+        return creattime;
+    }
+
+    public void setCreattime(String creattime) {
+        this.creattime = creattime;
+    }
 
     public String getUserName() {
         return userName;

@@ -8,4 +8,6 @@ public interface AreaService {
     List<Area> getAllArea();
 
     int insertOne(String name, Integer parentId,String code);
+
+    int upztreeName(Integer id,String name);
 }

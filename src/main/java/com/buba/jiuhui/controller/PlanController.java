@@ -28,17 +28,17 @@ public class PlanController {
 
     @ResponseBody
     @RequestMapping("findPlanAll")
-    public List<Plan> findPlanAll() {
+    public List<Plan> findPlanAll(Integer id) {
 
-        List<Plan> planAll = planService.findPlanAll();
+        List<Plan> planAll = planService.findPlanAll(id);
         return planAll;
     }
 
     @ResponseBody
     @RequestMapping("findliebiao")
-    public List<Plan> findliebiao() {
+    public List<Plan> findliebiao(Integer id) {
 
-        List<Plan> findliebiao = planService.findliebiao();
+        List<Plan> findliebiao = planService.findliebiao(id);
         return findliebiao;
 
 

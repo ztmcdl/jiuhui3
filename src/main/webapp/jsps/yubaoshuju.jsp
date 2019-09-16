@@ -60,13 +60,22 @@
 <script>
 
     $(function () {
+        var id='${user.id}';
 
         $.ajax({
             url:"${pageContext.request.contextPath}/plans/findPlanAll",
             type:"post",
             dataType:"json",
+            data:{id:id},
             success:function (data) {
+                if(data.planDis==''||data.planDis==null){
+                    $("#tianjia").show();
+                    $("#liebiao").hide();
+
+                }
                 $(data).each(function(a,b){
+
+
                 if (b.planDis!=1){
                     $("#tianjia").show();
                     $("#liebiao").hide();
